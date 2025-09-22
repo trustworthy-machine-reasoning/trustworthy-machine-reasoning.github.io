@@ -156,14 +156,3 @@ body {
   border-radius: 5px;
 }
 
-
-
-
-
-.presenter-name {
-  white-space: nowrap;   
-}
-
-.container.is-max-desktop {
-  max-width: 1400px;   
-}
