@@ -155,3 +155,20 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+
+
+
+
+.hero .presenter-profiles {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;  
+  gap: 2rem;
+  overflow-x: auto;   
+}
+
+.hero .presenter-card {
+  text-align: center;
+  flex: 0 0 auto;     
+}
