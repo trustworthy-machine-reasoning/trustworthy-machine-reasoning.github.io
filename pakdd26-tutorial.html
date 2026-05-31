@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Trustworthy and Efficient Machine Reasoning with Foundation Models (tutorial at PAKDD 2026).">
+  <meta name="keywords" content="Trustworthy Reasoning, Efficient Reasoning, Foundation Model, Foundation Agent, PAKDD 2026">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trustworthy and Efficient Machine Reasoning with Foundation Models — PAKDD 2026</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+
+  <style>
+    .presenter-profiles {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .presenter-card {
+      text-align: center;
+      flex: 0 1 150px;
+    }
+
+    .presenter-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .presenter-image:hover {
+      transform: scale(1.05);
+    }
+
+    .presenter-name {
+      font-size: 1.0rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: #03a5fc;
+    }
+
+    .presenter-affiliation {
+      font-size: 1.0rem;
+      color: #666;
+    }
+
+    .tutor-bio-section {
+      margin-bottom: 3rem;
+    }
+
+    .tutor-bio-container {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+
+    .tutor-bio-image {
+      flex-shrink: 0;
+      width: 180px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .tutor-bio-text {
+      flex: 1;
+    }
+
+    .publication-links .button {
+      min-width: 200px;
+    }
+
+    @media (max-width: 768px) {
+      .tutor-bio-container {
+        flex-direction: column;
+      }
+
+      .tutor-bio-image {
+        width: 150px;
+        height: 200px;
+        align-self: center;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Trustworthy and Efficient Machine Reasoning<br>with Foundation Models</h1>
+          <h1 class="title is-4 publication-title">Tutorial 7 at <a href="https://www.pakdd2026.org/">PAKDD 2026</a></h1>
+          <h1 class="title is-4 publication-title">Hong Kong</h1>
+
+          <!-- Profile Pictures Section -->
+          <div class="presenter-profiles">
+            <div class="presenter-card">
+              <img src="./img/Zhanke%20Zhou.png" alt="Zhanke Zhou" class="presenter-image">
+              <a href="https://andrewzhou924.github.io/"><div class="presenter-name">Zhanke Zhou</div></a>
+              <div class="presenter-affiliation">HKBU</div>
+            </div>
+            <div class="presenter-card">
+              <img src="./img/Chentao%20Cao.png" alt="Chentao Cao" class="presenter-image">
+              <a href="https://scholar.google.com/citations?user=vZPl_oQAAAAJ&hl=en"><div class="presenter-name">Chentao Cao</div></a>
+              <div class="presenter-affiliation">HKBU</div>
+            </div>
+            <div class="presenter-card">
+              <img src="./img/Jiangchao%20Yao.png" alt="Jiangchao Yao" class="presenter-image">
+              <a href="https://sunarker.github.io/"><div class="presenter-name">Jiangchao Yao</div></a>
+              <div class="presenter-affiliation">SJTU</div>
+            </div>
+            <div class="presenter-card">
+              <img src="./img/Bo%20Han.png" alt="Bo Han" class="presenter-image">
+              <a href="https://bhanml.github.io"><div class="presenter-name">Bo Han</div></a>
+              <div class="presenter-affiliation">HKBU/RIKEN</div>
+            </div>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. TODO: upload slides and update href -->
+              <span class="link-block">
+                <a href="#" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Tutorial Slides (coming soon)</span>
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered">
+      <div class="column is-11">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent advances in foundation models have led to remarkable progress in machine reasoning, driving breakthroughs in mathematics, coding, and scientific discovery. However, these advances are meaningful only if the reasoning is <em>trustworthy</em> (capable, safe, robust, and explainable) and <em>efficient</em> enough for real-world deployment.
+          </p>
+          <p>
+            This tutorial aims to chart the path from raw capability to trustworthy and efficient reasoning systems. Rather than treating capability, trustworthiness, and efficiency in isolation, we synthesize recent progress across prompting, post-training, test-time scaling, agentic reasoning, and accelerated decoding, highlighting how these components jointly shape reasoning that is both reliable and deployable.
+          </p>
+          <p>
+            The tutorial is organized into four main parts. First, we trace the evolution of reasoning and motivate a five-pillar framework for trustworthy and efficient reasoning: capability, safety, robustness, explainability, and efficiency. Second, we present core techniques for trustworthy reasoning with foundation models, including prompting strategies, test-time scaling methods, and post-training approaches that enhance robustness and safety. Third, we extend the discussion to foundation agents, covering tool-augmented, multi-agent, and multi-modal reasoning, along with their unique trustworthiness challenges. Finally, we turn to efficient reasoning in diffusion language models, investigating parallel draft-and-verify decoding strategies that deliver significant speedups while preserving output quality.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+ <!-- Schedule. -->
+    <div class="columns is-centered">
+      <div class="column is-11">
+        <h2 class="title is-3">Schedule</h2>
+        <div class="content has-text-justified">
+          <p><strong>Date:</strong> 9 June 2026. <strong>Venue:</strong> Room 5, Tai Po III Room, 2/F, Regal Riverside Hotel, Hong Kong.</p>
+          <p><strong>Format:</strong> Two 90-minute sessions separated by a 30-minute tea break (3 hours total).</p>
+          <ul>
+            <li><strong>13:30 &ndash; 15:00 &mdash; Session 1</strong>
+              <ul>
+                <li><strong>Part I:</strong> From Raw Reasoning to Trustworthy and Efficient Reasoning with Foundation Models (Bo Han)</li>
+                <li><strong>Part II:</strong> Methodology for Trustworthy Reasoning with Foundation Models (Zhanke Zhou)</li>
+              </ul>
+            </li>
+            <li><strong>15:00 &ndash; 15:30 &mdash; Tea Break</strong> (The Riverside Ballroom, 1/F)</li>
+            <li><strong>15:30 &ndash; 17:00 &mdash; Session 2</strong>
+              <ul>
+                <li><strong>Part III:</strong> Methodology for Trustworthy Reasoning with Foundation Agents (Chentao Cao)</li>
+                <li><strong>Part IV:</strong> Efficient Reasoning in Diffusion Language Models (Jiangchao Yao)</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tutor's Bio. -->
+    <div class="columns is-centered">
+      <div class="column is-11">
+        <h2 class="title is-3">Organizer's Bio</h2>
+        <div class="content">
+
+          <div class="tutor-bio-section">
+            <div class="tutor-bio-container">
+              <img src="./img/Zhanke%20Zhou.png" alt="Zhanke Zhou" class="tutor-bio-image">
+              <div class="tutor-bio-text">
+                <p>
+                  <a href="https://andrewzhou924.github.io" style="color: #03a5fc; text-decoration: none;"><strong>Zhanke Zhou</strong></a> is a Ph.D. student in the Trustworthy Machine Learning and Reasoning (TMLR) Group at Hong Kong Baptist University, advised by Prof. Bo Han. He was a visiting student at the Stanford Trustworthy Artificial Intelligence (STAIR) Lab at Stanford University, working with Prof. Sanmi Koyejo. His research focuses on trustworthy machine reasoning with foundation models, including large language models (LLMs) and vision-language models (VLMs), to solve complex problems such as mathematics and coding, as well as to accelerate scientific discovery and applications in fields such as biology, chemistry, and healthcare. He believes that reasoning is an essential pathway toward achieving artificial general intelligence (AGI). Trustworthy machine reasoning encompasses key properties including reasoning capability, robustness, safety, and explainability.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tutor-bio-section">
+            <div class="tutor-bio-container">
+              <img src="./img/Chentao%20Cao.png" alt="Chentao Cao" class="tutor-bio-image">
+              <div class="tutor-bio-text">
+                <p>
+                  <a href="https://scholar.google.com/citations?user=vZPl_oQAAAAJ&hl=en" style="color: #03a5fc; text-decoration: none;"><strong>Chentao Cao</strong></a> is currently a Ph.D. student in the Trustworthy Machine Learning and Reasoning (TMLR) Group at Hong Kong Baptist University, under the supervision of Prof. Bo Han, and collaborating closely with Prof. Zhun Zhong. His research primarily centers on developing trustworthy machine reasoning frameworks with foundation models, including large language models (LLMs) and vision-language models (VLMs). His goal is to create robust and reliable reasoning models capable of addressing complex problems, such as mathematics. By enhancing the trustworthiness of foundation models, he seeks to drive advancements in critical downstream applications, particularly in healthcare and safety domains, thereby enabling more effective and safer solutions in real-world scenarios.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tutor-bio-section">
+            <div class="tutor-bio-container">
+              <img src="./img/Jiangchao%20Yao.png" alt="Jiangchao Yao" class="tutor-bio-image">
+              <div class="tutor-bio-text">
+                <p>
+                  <a href="https://sunarker.github.io/" style="color: #03a5fc; text-decoration: none;"><strong>Jiangchao Yao</strong></a> is currently an Associate Professor at Cooperative Medianet Innovation Center, Shanghai Jiao Tong University and a research scientist in Shanghai AI Laboratory. Before taking the faculty job, he was an algorithm expert in Data Analytics and Intelligence Lab, DAMO Academy, Alibaba Group, and received the dual Ph.D. degree in Shanghai Jiao Tong University and University of Technology Sydney in 2019. His research mainly focuses on trustworthy machine learning and reasoning with the applications towards AI4Science. He has more than 100 publications in top-tier conferences and journals (e.g., ICML, NeurIPS, ICLR and TPAMI), and one monograph about trustworthy machine learning. He is area chair of ICML, NeurIPS and ICLR, and action editor of Transactions on Machine Learning Research and the journal Neural Networks. He has been selected as an MSRA StarTrack Scholar in 2025.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tutor-bio-section">
+            <div class="tutor-bio-container">
+              <img src="./img/Bo%20Han.png" alt="Bo Han" class="tutor-bio-image">
+              <div class="tutor-bio-text">
+                <p>
+                  <a href="https://bhanml.github.io" style="color: #03a5fc; text-decoration: none;"><strong>Bo Han</strong></a> is currently an Associate Professor in Machine Learning and the Director of the Trustworthy Machine Learning and Reasoning Group at Hong Kong Baptist University, and a BAIHO Visiting Scientist of the Imperfect Information Learning Team at the RIKEN Center for Advanced Intelligence Project (RIKEN AIP). His research focuses on trustworthy machine learning. He has received multiple paper awards, including the Outstanding Paper Award at NeurIPS, the Most Influential Paper Award at NeurIPS, and the Outstanding Student Paper Award at a NeurIPS Workshop. He is also a recipient of the RGC Early CAREER Scheme, IEEE AI's 10 to Watch Award, IJCAI Early Career Spotlight, INNS Aharon Katzir Young Investigator Award, RIKEN BAIHO Award, Dean's Award for Outstanding Achievement, and the Microsoft Research StarTrack Scholars Program.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Tutor's Bio. -->
+
+    <!-- Previous Tutorials. -->
+    <div class="columns is-centered">
+      <div class="column is-11">
+        <h2 class="title is-3">Previous Tutorials</h2>
+        <div class="content has-text-justified">
+          <ul>
+            <li><a href="./aaai26-tutorial.html">AAAI 2026 Tutorial</a>: Trustworthy Machine Reasoning with Foundation Models, Singapore.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--/ Previous Tutorials. -->
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
