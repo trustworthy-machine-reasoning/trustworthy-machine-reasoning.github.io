@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Trustworthy and Efficient Machine Reasoning with Foundation Models (tutorial at ACML 2026).">
+  <meta name="keywords" content="Trustworthy Reasoning, Efficient Reasoning, Foundation Model, Foundation Agent, ACML 2026">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trustworthy and Efficient Machine Reasoning with Foundation Models — ACML 2026</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+
+
+  <style>
+    .presenter-profiles {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .presenter-card {
+      text-align: center;
+      flex: 0 1 150px;
+    }
+
+    .presenter-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .presenter-image:hover {
+      transform: scale(1.05);
+    }
+
+    .presenter-name {
+      font-size: 1.0rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: #03a5fc;
+    }
+
+    .presenter-affiliation {
+      font-size: 1.0rem;
+      color: #666;
+    }
+
+    .tutor-bio-section {
+      margin-bottom: 3rem;
+    }
+
+    .tutor-bio-container {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+
+    .tutor-bio-image {
+      flex-shrink: 0;
+      width: 180px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .tutor-bio-text {
+      flex: 1;
+    }
+
+    .tutorial-section { margin-bottom: 2.5rem; }
+    .tutorial-meta { margin: 1rem 0; }
+    .resource-status { display: inline-block; padding: .6rem 1.4rem; border-radius: 999px; background: #f2f2f2; }
+    .contact-email { overflow-wrap: anywhere; }
+    .session { margin-top: 1.75rem; }
+    .session h3 { line-height: 1.4; }
+    a:focus-visible { outline: 2px solid #03a5fc; outline-offset: 4px; }
+    @media (max-width: 480px) {
+      .hero-body { padding: 2rem 1.25rem; }
+      .presenter-profiles { gap: 1.25rem .5rem; }
+      .presenter-card { flex-basis: 135px; }
+      .content.has-text-justified { text-align: left !important; }
+    }
+
+    @media (max-width: 768px) {
+      .tutor-bio-container {
+        flex-direction: column;
+      }
+
+      .tutor-bio-image {
+        width: 150px;
+        height: 200px;
+        align-self: center;
+      }
+    }
+  </style>
+  <link rel="canonical" href="https://trustworthy-machine-reasoning.github.io/acml26-tutorial.html">
+</head>
+
+
+<body>
+<main>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h1 class="title is-2 publication-title">Trustworthy and Efficient Machine Reasoning<br>with Foundation Models</h1>
+      <p class="title is-4 publication-title">Tutorial at <a href="https://www.acml-conf.org/2026/">ACML 2026</a></p>
+      <p class="title is-4 publication-title">1 December 2026 · Melbourne, Australia</p>
+      <div class="presenter-profiles">
+            <div class="presenter-card">
+              <img src="./img/Zhanke%20Zhou.png" alt="Zhanke Zhou" class="presenter-image">
+              <a href="https://andrewzhou924.github.io/"><div class="presenter-name">Zhanke Zhou</div></a>
+              <div class="presenter-affiliation">HKBU</div>
+            </div>
+            <div class="presenter-card">
+              <img src="./img/Chentao%20Cao.png" alt="Chentao Cao" class="presenter-image">
+              <a href="https://aboriginer.github.io/"><div class="presenter-name">Chentao Cao</div></a>
+              <div class="presenter-affiliation">HKBU</div>
+            </div>
+            <div class="presenter-card">
+              <img src="./img/Jiangchao%20Yao.png" alt="Jiangchao Yao" class="presenter-image" style="object-fit: contain;">
+              <a href="https://sunarker.github.io/"><div class="presenter-name">Jiangchao Yao</div></a>
+              <div class="presenter-affiliation">SJTU</div>
+            </div>
+      </div>
+      <p class="tutorial-meta"><strong>Contact:</strong> <a class="contact-email" href="mailto:cszkzhou@comp.hkbu.edu.hk">cszkzhou@comp.hkbu.edu.hk</a></p>
+      <p class="resource-status"><strong>Tutorial materials:</strong> Coming soon</p>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered tutorial-section" id="abstract">
+      <div class="column is-11">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Foundation-model reasoning increasingly occurs inside agents that combine models with tools, memory, control loops, execution feedback, and verification. This tutorial surveys the community’s progression from model-level reasoning to tool-using, self-improving, and deployable agents.</p>
+          <p>We connect foundational methods for reasoning, acting, reflection, and agent-computer interaction with recent open ecosystems such as OpenClaw and Hermes Agent. AlphaApollo and AlphaDiana serve as two brief recent case studies for agent construction and harness-aware evaluation within this broader landscape.</p>
+          <p>A third thread, introduced from the outset, examines efficient reasoning in diffusion language models, where parallel generation must be balanced against iterative refinement and reliability. Across all three threads, attendees learn to separate model, harness, environment, evaluation, and inference failures and to select appropriate interventions.</p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered tutorial-section" id="schedule">
+      <div class="column is-11">
+        <h2 class="title is-3">Schedule</h2>
+        <div class="content has-text-justified">
+          <p><strong>Date:</strong> 1 December 2026.<br>
+          <strong>Time:</strong> TBA (Melbourne local time).<br>
+          <strong>Conference venue:</strong> <a href="https://www.acml-conf.org/2026/venues/venue/">RMIT University, Swanston Academic Building (Building 80)</a>, 445 Swanston Street, Melbourne VIC 3000, Australia.<br>
+          <strong>Tutorial room:</strong> TBA.</p>
+          <p><strong>Format:</strong> In person; 150 minutes (2 hours 30 minutes), divided into three 50-minute sessions. The start time and room will be updated when announced by ACML.</p>
+          <ol>
+            <li><strong>Session 1 (50 minutes):</strong> From Raw Model Reasoning to Trustworthy Agentic Reasoning — Zhanke Zhou.</li>
+            <li><strong>Session 2 (50 minutes):</strong> Harness-Aware Evaluation of Trustworthy Agents — Chentao Cao.</li>
+            <li><strong>Session 3 (50 minutes):</strong> Efficient Reasoning in Diffusion Language Models — Jiangchao Yao.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered tutorial-section" id="outline">
+      <div class="column is-11">
+        <h2 class="title is-3">Tutorial Outline</h2>
+        <div class="content has-text-justified">
+          <div class="session">
+            <h3 class="title is-5">Session 1: From Raw Model Reasoning to Trustworthy Agentic Reasoning</h3>
+            <p><strong>Zhanke Zhou · 50 minutes</strong></p>
+            <p>We distinguish parametric knowledge, chain-of-thought, external action, and executable verification, then progress through ReAct, Toolformer, Reflexion, and SWE-agent. Worked trajectories show when tools extend capability and when interface errors or misleading feedback amplify mistakes. OpenClaw and Hermes Agent illustrate skills, persistent memory, messaging, scheduled tasks, and subagents. We analyze prompt injection, memory contamination, tool failure, permissions, sandbox assumptions, recovery, and human approval. AlphaApollo provides a construction case spanning multi-turn interaction, turn-level learning, multi-round evolution, and executable feedback. A comparison matrix summarizes mechanisms, trust assumptions, and suitable problems; five minutes are reserved for Q&amp;A.</p>
+          </div>
+          <div class="session">
+            <h3 class="title is-5">Session 2: Harness-Aware Evaluation of Trustworthy Agents</h3>
+            <p><strong>Chentao Cao · 50 minutes</strong></p>
+            <p>We next ask where measured capability comes from. AgentBench motivates multi-environment assessment, while SWE-agent shows that interfaces change results. We decompose evaluation into model, prompt and tool schema, state, execution and recovery policy, environment, scorer, and budget. A practical blueprint covers environment pinning, contamination checks, trajectory logging, pass@k, error taxonomies, cost, latency, and component ablations. AlphaDiana supplies a matched model-harness case on verifiable tasks; examples involving third-party skills, memory, sandboxes, and approvals show why end scores are insufficient. Attendees learn to distinguish reasoning failure from tool misuse, harness advantage, evaluator leakage, and budget effects. We close with validity and reproducibility questions, five minutes of Q&amp;A, and handover.</p>
+          </div>
+          <div class="session">
+            <h3 class="title is-5">Session 3: Efficient Reasoning in Diffusion Language Models</h3>
+            <p><strong>Jiangchao Yao · 50 minutes</strong></p>
+            <p>Long reasoning traces make latency and cost part of trustworthiness. We contrast autoregressive factorization with diffusion models such as LLaDA: bidirectional conditioning and parallel prediction enable correction but require iterative denoising. We show how schedules, block size, confidence-based selection, remasking, KV-cache reuse, and draft-and-verify alter compute and error propagation. Revocable decoding is the efficiency case study. Worked comparisons measure time to a matched-quality answer, including denoising steps, calibration, hardware, cache behavior, and verifier cost. We close with a deployment checklist and open questions on scalable verification, confidence, and scientific reasoning.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered tutorial-section" id="learning-outcomes">
+      <div class="column is-11">
+        <h2 class="title is-3">Learning Outcomes and Prerequisites</h2>
+        <div class="content has-text-justified">
+          <p>After the tutorial, participants will be able to:</p>
+          <ul>
+            <li>Select among tool use, reflection, memory, verification, and agent-computer interfaces for a target problem.</li>
+            <li>Diagnose capability boundaries and reliability risks caused by models, tools, long-running state, permissions, or environments.</li>
+            <li>Design reproducible, harness-aware evaluations using controlled environments, trajectory records, component ablations, and cost reporting.</li>
+            <li>Compare autoregressive and diffusion reasoning under matched accuracy, latency, calibration, hardware, and verification budgets.</li>
+          </ul>
+          <p><strong>Prerequisites:</strong> Basic familiarity with deep learning and language models is sufficient.</p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered tutorial-section" id="presenters">
+      <div class="column is-11">
+        <h2 class="title is-3">Presenters' Bios</h2>
+        <div class="content has-text-justified">
+          <div class="tutor-bio-section">
+            <div class="tutor-bio-container">
+              <img src="./img/Zhanke%20Zhou.png" alt="Zhanke Zhou" class="tutor-bio-image">
+              <div class="tutor-bio-text"><p><a href="https://andrewzhou924.github.io/"><strong>Zhanke Zhou</strong></a> is a Ph.D. student in the Trustworthy Machine Learning and Reasoning Group at Hong Kong Baptist University, advised by Prof. Bo Han. He previously visited Stanford’s STAIR Lab to work with Prof. Sanmi Koyejo. His research advances trustworthy foundation-model reasoning toward AGI, complex problem solving, and scientific discovery in mathematics, physics, and bioinformatics, with work published across leading venues including ICML, NeurIPS, and ICLR.</p></div>
+            </div>
+          </div>
+          <div class="tutor-bio-section">
+            <div class="tutor-bio-container">
+              <img src="./img/Chentao%20Cao.png" alt="Chentao Cao" class="tutor-bio-image">
+              <div class="tutor-bio-text"><p><a href="https://aboriginer.github.io/"><strong>Chentao Cao</strong></a> is a Ph.D. student in the Trustworthy Machine Learning and Reasoning Group at Hong Kong Baptist University, advised by Prof. Bo Han and collaborating with Prof. Zhun Zhong. His research focuses on trustworthy physical intelligence: enabling embodied systems to perceive, reason about, and act safely in the physical world under multimodal uncertainty and distribution shift. He has papers at ICML and ICLR.</p></div>
+            </div>
+          </div>
+          <div class="tutor-bio-section">
+            <div class="tutor-bio-container">
+              <img src="./img/Jiangchao%20Yao.png" alt="Jiangchao Yao" class="tutor-bio-image" style="object-fit: contain;">
+              <div class="tutor-bio-text"><p><a href="https://sunarker.github.io/"><strong>Jiangchao Yao</strong></a> is an Associate Professor at Shanghai Jiao Tong University and a research scientist at Shanghai AI Laboratory. A former Alibaba DAMO Academy algorithm expert, he earned a dual Ph.D. from SJTU and UTS in 2019. He has over 100 publications and a monograph on trustworthy learning, serves as an area chair for ICML, NeurIPS, and ICLR, and is an action editor for TMLR and Neural Networks. His recent recognition includes selection as an MSRA StarTrack Scholar in 2025.</p></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered tutorial-section" id="related-tutorials">
+      <div class="column is-11">
+        <h2 class="title is-3">Related Tutorials</h2>
+        <div class="content has-text-justified">
+          <ul>
+            <li><a href="./pakdd26-tutorial.html">PAKDD 2026 Tutorial</a>: Trustworthy and Efficient Machine Reasoning with Foundation Models, Hong Kong.</li>
+            <li><a href="./aaai26-tutorial.html">AAAI 2026 Tutorial</a>: Trustworthy Machine Reasoning with Foundation Models, Singapore.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>This website template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
